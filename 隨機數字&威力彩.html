@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const rand = (min, max) => {
+        //     return Math.round(Math.random() * (max - min)) + min
+        // }
+
+        const groupA = []
+
+        for (let i = 0; i < 6; i++) {
+            // 每次隨機數字
+            const num = rand(1, 38)
+            if (groupA.includes(num)) {
+                // 如果重複，迴圈再跑一次
+                i--
+            } else {
+                // 沒有重複就放陣列
+                groupA.push(num)
+            }
+        }
+
+
+        // while (groupA.length < 6) {
+        //     // 每次隨機數字
+        //     const num = rand(1, 38)
+        //     // 沒有重複就放陣列
+        //     if (!groupA.includes(num)) {
+        //         groupA.push(num)
+        //     }
+        // }
+        document.write(groupA.join(','))
+
+
+    </script>
+</body>
+
+</html>
